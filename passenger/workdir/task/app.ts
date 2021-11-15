@@ -24,7 +24,7 @@ let passangerGenerator = function (passengers: number): object[] {
 
     passengerArr.push(passenger);
   }
-  //   console.log(passengerArr);
+  console.log(passengerArr);
   return passengerArr;
 };
 
@@ -36,10 +36,10 @@ const taskOne = (passengers: number, shuffle: number) => {
     count: 0,
   };
   let totalPassengers = passangerGenerator(passengers);
-  //   console.log(totalPassengers);
 
   if (totalPassengers.length < 5) {
     totalPassengers.forEach((el) => output.reservation.push(el));
+    // console.log(output);
     return output;
   }
 
@@ -86,7 +86,7 @@ const taskOne = (passengers: number, shuffle: number) => {
       totalPassengers.forEach((el) => output.boarded.push(el));
       output.count += 1;
       shuffle -= 1;
-      //   console.log(shuffle)
+      console.log(output);
     } else {
       let extraPassengers = totalPassengers.splice(50);
 
@@ -95,12 +95,13 @@ const taskOne = (passengers: number, shuffle: number) => {
       extraPassengers.forEach((el) => output.reservation.push(el));
       output.count += 1;
       shuffle -= 1;
+      console.log(output);
     }
   }
 
   return output;
 };
 
-// taskOne(433, 8);
+taskOne(213, 3);
 // console.log(taskOne(50, 0));
 export default taskOne;
