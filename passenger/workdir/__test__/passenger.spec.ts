@@ -100,8 +100,8 @@ describe("test for shuffle", () => {
 });
 
 describe("test for boarded value with passengers of 50 and shuffle 0", () => {
-  let passengers = 50;
-  let shuffle = 0;
+  const passengers = 50;
+  const shuffle = 0;
 
   const expected = task(passengers, shuffle);
   expect(expected.boarded).toStrictEqual(prefilled);

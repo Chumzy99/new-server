@@ -102,5 +102,5 @@ const taskOne = (passengers: number, shuffle: number) => {
 };
 
 // taskOne(433, 8);
-console.log(taskOne(50, 0));
+// console.log(taskOne(50, 0));
 export default taskOne;
