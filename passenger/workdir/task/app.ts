@@ -21,15 +21,12 @@ let passangerGenerator = function (passengers: number): object[] {
     let passengerIndex = i + 1;
     passenger.location = locations[locationIndex];
     passenger.name = `passenger${passengerIndex}`;
-
     passengerArr.push(passenger);
   }
-  console.log(passengerArr);
   return passengerArr;
 };
 
 const taskOne = (passengers: number, shuffle: number) => {
-  // complete your work here
   let output: Output = {
     boarded: [],
     reservation: [],
@@ -38,8 +35,7 @@ const taskOne = (passengers: number, shuffle: number) => {
   let totalPassengers = passangerGenerator(passengers);
 
   if (totalPassengers.length < 5) {
-    totalPassengers.forEach((el) => output.reservation.push(el));
-    // console.log(output);
+    output.reservation.push(...totalPassengers);
     return output;
   }
 
@@ -48,21 +44,17 @@ const taskOne = (passengers: number, shuffle: number) => {
     let extraPassengers: object[] = totalPassengers.splice(
       totalPassengers.length - remainder
     );
-
-    extraPassengers.forEach((el) => output.reservation.push(el));
-    totalPassengers.forEach((el) => output.boarded.push(el));
+    output.reservation.push(...extraPassengers);
+    output.boarded.push(...totalPassengers);
     output.count += 1;
-    // console.log(output);
     return output;
   }
 
   if (totalPassengers.length > 50 && shuffle <= 0) {
     let extraPassengers: object[] = totalPassengers.splice(50);
-
-    extraPassengers.forEach((el) => output.reservation.push(el));
-    totalPassengers.forEach((el) => output.boarded.push(el));
+    output.reservation.push(...extraPassengers);
+    output.boarded.push(...totalPassengers);
     output.count += 1;
-    // console.log(output);
     return output;
   }
 
@@ -75,24 +67,20 @@ const taskOne = (passengers: number, shuffle: number) => {
       totalPassengers = totalPassengers.splice(50);
     }
 
-    // console.log(totalPassengers);
-
     if (shuffle > 1) {
       let remainder: number = totalPassengers.length % 5;
       let extraPassengers: object[] = totalPassengers.splice(
         totalPassengers.length - remainder
       );
-      extraPassengers.forEach((el) => output.reservation.push(el));
-      totalPassengers.forEach((el) => output.boarded.push(el));
+      output.reservation.push(...extraPassengers);
+      output.boarded.push(...totalPassengers);
       output.count += 1;
       shuffle -= 1;
       console.log(output);
     } else {
       let extraPassengers = totalPassengers.splice(50);
-
-      //   console.log(totalPassengers);
-      totalPassengers.forEach((el) => output.boarded.push(el));
-      extraPassengers.forEach((el) => output.reservation.push(el));
+      output.boarded.push(...totalPassengers);
+      output.reservation.push(...extraPassengers);
       output.count += 1;
       shuffle -= 1;
       console.log(output);
@@ -102,6 +90,5 @@ const taskOne = (passengers: number, shuffle: number) => {
   return output;
 };
 
-taskOne(213, 3);
-// console.log(taskOne(50, 0));
+// taskOne(34, 3);
 export default taskOne;
