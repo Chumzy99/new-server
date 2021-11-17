@@ -1,0 +1,38 @@
+[
+  {
+    "productName": "T Shirt",
+    "productId": "1",
+    "productDescription": "Men's Vintage Shirt Casual Short Sleeve T-Shirt",
+    "size": "medium",
+    "color": "blue",
+    "quantity": "35",
+    "images": "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/86/690064/1.jpg?7852",
+    "price": "35000",
+    "dateUploaded": "1636633307531",
+    "dateEdited": "1636633307531"
+  },
+  {
+    "productName": "Bag",
+    "productId": "6",
+    "productDescription": "fancy men's bag",
+    "size": "large",
+    "color": "orange",
+    "quantity": "15",
+    "images": "https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/35/313613/1.jpg?4650",
+    "price": "23000",
+    "dateUploaded": "1636904320831",
+    "dateEdited": "1636904320832"
+  },
+  {
+    "productName": "shoe",
+    "productId": "61",
+    "productDescription": "cloth",
+    "size": "small",
+    "color": "yelloe",
+    "quantity": "1",
+    "images": "https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/64/950456/1.jpg?0716",
+    "price": "2000",
+    "dateUploaded": "1636926639751",
+    "dateEdited": "1636926639751"
+  }
+]
