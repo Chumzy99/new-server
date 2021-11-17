@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  color: #444;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px 20px 50px 20px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  gap: 15px;
+  margin-right: 35px;
+}
+
+ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #444;
+}
+
+ul li a:hover {
+  color: rgb(255, 178, 115);
+}
+
+.icon {
+  color: rgb(255, 178, 115);
+  font-size: 25px;
+}
+
+.product {
+  margin: 25px;
+}
+
+figure {
+  border: 1px solid #444;
+  flex-basis: 350px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.productscontainer {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  margin-top: 70px;
+  flex: 1 0 auto;
+  margin-bottom: 70px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #444;
+}
+
+h2 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+figure p {
+  padding: 10px;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  color: rgb(255, 178, 115);
+  background-color: #444;
+}
+
+button:hover {
+  background-color: rgb(255, 178, 115);
+  color: #444;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 30px;
+}

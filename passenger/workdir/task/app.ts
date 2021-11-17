@@ -76,14 +76,12 @@ const taskOne = (passengers: number, shuffle: number) => {
       output.boarded.push(...totalPassengers);
       output.count += 1;
       shuffle -= 1;
-      console.log(output);
     } else {
       let extraPassengers = totalPassengers.splice(50);
       output.boarded.push(...totalPassengers);
       output.reservation.push(...extraPassengers);
       output.count += 1;
       shuffle -= 1;
-      console.log(output);
     }
   }
 
